@@ -1,6 +1,6 @@
 /*! Dust - Asynchronous Templating - v2.5.1
 * http://linkedin.github.io/dustjs/
-* Copyright (c) 2014 Aleksander Williams; Released under the MIT License */
+* Copyright (c) 2015 Aleksander Williams; Released under the MIT License */
 (function(root) {
   var dust = {},
       NONE = 'NONE',
@@ -295,7 +295,7 @@
    * @returns {string|object}
    */
   Context.prototype.get = function(path, cur) {
-    if (typeof path === 'string') {
+    if (typeof path === 'string') {    
       if (path[0] === '.') {
         cur = true;
         path = path.substr(1);
@@ -373,6 +373,17 @@
       return fn;
     } else {
       if (ctx === undefined) {
+        var path=down.join('.').trim();
+        if ( window.curr_trans &&
+            path[0] === 't' &&
+            typeof window.curr_trans[path] !== "undefined")
+          {
+                return window.curr_trans[path];
+          }
+        else if( path[0] === 't' )
+        {
+            return path.substring(1);
+        }
         dust.log('Cannot find the value for reference [{' + down.join('.') + '}] in template [' + this.getTemplateName() + ']');
       }
       return ctx;
