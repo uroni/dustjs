@@ -1,7 +1,7 @@
 {
   "name": "dustjs-linkedin",
   "title": "Dust - Asynchronous Templating",
-  "version": "2.3.3",
+  "version": "2.5.1",
   "author": {
     "name": "Aleksander Williams",
     "url": "http://akdubya.github.com/dustjs"
@@ -9,26 +9,15 @@
   "homepage": "http://linkedin.github.io/dustjs/",
   "description": "Asynchronous templates for the browser and node.js ( LinkedIn fork )",
   "contributors": [
-    {
-      "name": "Jairo de Morais",
-      "email": "jdemorais@linkedin.com"
-    },
-    {
-      "name": "Veena Basavaraj",
-      "email": "vbasavaraj@linkedin.com"
-    },
-    {
-      "name": "Jimmy Chan",
-      "email": "jchan@linkedin.com"
-    },
-    {
-      "name": "Richard Ragan",
-      "email": "rragan@ebay.com"
-    },
-    {
-      "name": "Steven Foote",
-      "email": "sfoote@linkedin.com"
-    }
+    "Veena Basavaraj <veena.braj@gmail.com>",
+    "Tom Carchrae",
+    "Jimmy Chan <jchan@linkedin.com>",
+    "Steven Foote <sfoote@linkedin.com>",
+    "Prayrit Prash Jain <prjain@linkedin.com>",
+    "Seth Kinast <skinast@linkedin.com>",
+    "Jairo de Morais <jairodemorais@gmail.com>",
+    "Kate Odnous <kodnous@linkedin.com>",
+    "Richard Ragan <rragan@ebay.com>"
   ],
   "scripts": {
     "test": "grunt test"
@@ -37,16 +26,21 @@
     "dustc": "./bin/dustc"
   },
   "main": "lib/server.js",
+  "browser": "./lib/dust.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/linkedin/dustjs.git"
   },
   "keywords": [
     "templates",
-    "views"
+    "views",
+    "dust",
+    "dustjs",
+    "dust.js",
+    "linkedin"
   ],
   "devDependencies": {
-    "pegjs": "0.7.0",
+    "pegjs": "0.8.0",
     "grunt": "~0.4.2",
     "grunt-contrib-connect": "~0.5.0",
     "grunt-template-jasmine-istanbul": "~0.2.5",
